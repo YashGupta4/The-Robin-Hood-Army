@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contactus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(23, 28, 40, 255);
+  margin-top: -25px;
+}
+
+footer>h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-family: rampart;
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.containercon {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1;
+}
+
+.contact-info {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background-color: rgba(23, 28, 40, 255);
+  z-index: 2;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.containercon .contact-info h2 {
+  /* contact us in left slide block*/
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.info {
+  position: relative;
+  margin: 20px 0;
+}
+
+.containercon .contact-info ul.info li {
+  position: relative;
+  /* list-style-type: none; */
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.containercon .contact-info ul.info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+  margin-right: 10px;
+}
+
+.containercon .contact-info ul.info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert();
+}
+
+.containercon .contact-info ul.info li span:nth-child(2) {
+  color: white;
+  /* text in left slide block*/
+  left: 20px;
+  font-weight: 300;
+}
+
+.logos_of_scoial {
+  position: relative;
+  display: flex;
+}
+
+.logos_of_scoial li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+.logos_of_scoial li a {
+  text-decoration: none;
+}
+
+.logos_of_scoial li img:last-child {
+  width: 20px;
+  height: 20px;
+}
+
+.logos_of_scoial li img {
+  filter: invert(1);
+  /* to change color of logos to white*/
+}
+
+.contact-form {
+  /* form in the centre */
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.contact-form h2 {
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.form-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.form-input {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.w50 {
+  width: 47%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.form-input input, textarea {
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+
+.form-input textarea {
+  height: 120px;
+}
+
+.form-input span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.form-input input:focus~span, .form-input input:valid~span, .form-input textarea:valid~span, .form-input textarea:focus~span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #095a55;
+  font-weight: 500;
+}
+
+.form-input input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #095a55;
+  color: white;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+  border: 2px solid #095a55;
+}
+
+.form-input input[type="submit"]:hover {
+  background-color: white;
+  color: #095a55;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .containercon {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  .containercon .contact-info {
+    top: 0;
+    position: relative;
+    box-shadow: none;
+  }
+  .contact-form {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: -150px;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .contactus {
+    /* background-color: #fff38e; */
+    background-color: rgba(23, 28, 40, 255);
+  }
+  .contactus::before {
+    display: none;
+  }
+  .containercon {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-info {
+    width: 100%;
+    /* height: 200px; */
+    flex-direction: row;
+  }
+  .contact-form {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer>h1 {
+    color: tan;
+    margin-top: 40%;
+  }
+  .contact-form {
+    padding: 25px;
+    height: 600px;
+  }
+  .contact-info {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logos_of_scoial {
+    margin-top: 20px;
+  }
+  .form-input {
+    width: 100%;
+  }
+}
