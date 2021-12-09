@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+:root{
+  --Playfair: 'Playfair Display', serif;
+  --Roboto: 'Roboto', sans-serif;
+  --dark: #3c393d;
+  --exDark: #2b2b2b;
+}
+.container {
+  display: flex;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+.background{
+  background: rgba(32, 32, 32, 0.8) url(../img/3.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+.firstSection{
+  height: 500px;
+}
+/*blog*/
+  .blog{
+    padding: 4.5rem 0;
+}
+.blog-content{
+    margin: 2rem 0;
+}
+.blog-img{
+    position: relative;
+}
+.blog-img img{
+  width: 450px;
+}
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+.blog-text span{
+    color: #000000;
+    font-family: Poppins;
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.blog-text h3{
+    color: #000000;
+    font-family: Poppins;
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+.blog-text p{
+    font-weight: 300;
+    font-family: Poppins;
+    color:black;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+.blog-text a{
+  border-radius: 5px;
+    font-family:Poppins;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    background: #34495e;
+    color: #fff;
+    padding: 0.55rem 1.2rem;
+    transition: all 0.5s ease;
+}
+.blog-text a:hover{
+  background: #2c3e50;
+}
+.title h3{
+  text-align: center;
+  margin-top: 8%;
+  font-weight: 500;
+  font-size: 35px;
+  font-family: Poppins;
+  color:#000000;
+}
+.service h3{
+  text-align: center;
+  margin-top: -60px;
+  font-weight: 500;
+  font-size: 35px;
+  font-family: Poppins;
+  color:#000000;
+} 
+  @media(max-width: 500px) {
+    .blog-img img{
+      width:300px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+@media screen and (min-width: 992px){
+  .blog-content{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px){
+.blog-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+}
